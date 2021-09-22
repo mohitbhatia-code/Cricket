@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="NormalBatsmanTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-09-22T04:59:08" hostname="MOHITs-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="normalBatsmanShouldNotScoreGreaterThan6()" classname="NormalBatsmanTest" time="0.0"/>
+  <testcase name="normalBatsmanShouldScoreBetween0And6()" classname="NormalBatsmanTest" time="0.001"/>
+  <testcase name="normalBatsmanShouldNotScoreLessThan0()" classname="NormalBatsmanTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

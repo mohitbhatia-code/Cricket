@@ -7,7 +7,7 @@ import static org.mockito.Mockito.when;
 
 public class MatchTest {
 
-    Batsman batsman = mock(Batsman.class);
+
     Baller baller = mock(Baller.class);
 
     @Test
@@ -15,6 +15,7 @@ public class MatchTest {
         int scoreToBeChased = 12;
         int over = 2;
 
+        Batsman batsman = mock(HitterBatsman.class);
         Match cricketMatch = new Match(batsman, baller,scoreToBeChased, over);
 
         when(batsman.bat()).thenReturn(4);
@@ -29,6 +30,7 @@ public class MatchTest {
         int scoreToBeChased = 12;
         int over = 1;
 
+        Batsman batsman = mock(NormalBatsman.class);
         Match cricketMatch = new Match(batsman, baller, scoreToBeChased, over);
 
         when(batsman.bat()).thenReturn(1);
@@ -43,6 +45,7 @@ public class MatchTest {
     void shouldReturnFalseWhenBatsmanIsOutAndTargetNotAchieved() {
         int scoreToBeChased = 12;
         int over = 2;
+        Batsman batsman = mock(NormalBatsman.class);
         Match cricketMatch = new Match(batsman, baller, scoreToBeChased, over);
 
         when(batsman.bat()).thenReturn(1);
