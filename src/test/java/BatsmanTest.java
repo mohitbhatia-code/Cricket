@@ -16,10 +16,18 @@ class BatsmanTest {
     }
 
     @Test
-    void scoreShouldBe0Or4Or6ForAHitman() {
-        Batsman batsman = new Batsman(BatsmanType.HITMAN);
+    void scoreShouldBe0Or4Or6ForAHitter() {
+        Batsman batsman = new Batsman(BatsmanType.HITTER);
         int score = batsman.bat();
         List<Integer> expectedScores = Arrays.asList(0,4,6);
         assertTrue(expectedScores.contains(score));
+    }
+
+    @Test
+    void scoreShouldNotBe1Or2Or3Or5ForHitter() {
+        Batsman batsman = new Batsman(BatsmanType.HITTER);
+        int score = batsman.bat();
+        List<Integer> expectedScores = Arrays.asList(1,2,3,5);
+        assertFalse(expectedScores.contains(score));
     }
 }
